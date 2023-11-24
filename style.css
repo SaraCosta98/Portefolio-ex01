@@ -1,0 +1,142 @@
+body {
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+a{ 
+    color: #000;
+    font-family: 'Rock Salt', cursive;
+}
+
+/* Grid Elements*/
+
+.grid-container {
+    /* display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto);
+    grid-auto-rows: minmax(1fr, auto);*/
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-item {
+    /*background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.625rem;
+    border: 2px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+
+    touch-action: none;
+    user-select: none;
+    transform: translate(0px, 0px);*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 280px;
+    margin-right: 10px;
+    color: black;
+    margin: 1rem;
+    object-fit: cover;
+    font-size: 20px;
+}
+
+.cv{
+    min-height: 200px;
+    background-color: rgb(230, 236, 61);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.skill {
+    background-color: rgb(154, 203, 54);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 23px;
+}
+
+.frase {
+    background-color: rgb(238, 130, 193);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info{
+    background-color: rgb(124, 203, 222);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    height: 20px;
+}
+
+.grid-item:hover,
+.skill:hover,
+.info:hover,
+.frase:hover {
+    cursor: none !important;
+}
+
+.grid-container img{
+    width: 100%; /* Make the image width fill the container */
+    height: 100%; /* Maintain aspect ratio (auto-adjust height) */
+    display: block; /* Remove default image inline display */
+    box-shadow: 0px 1px 2px #000;
+    object-fit: cover;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Cursor */
+
+.emoji-cursor {
+    position: absolute;
+    width: 28px;
+    /* Adjust the size of your emoji */
+    height: 24px;
+    pointer-events: none;
+    /* Ensure the emoji doesn't interfere with other elements */
+    user-select: none;
+    /* Prevent text selection */
+    transform: translate(-50%, -50%);
+    /* Center the emoji on the mouse pointer */
+    animation: cursorBounce 0.4s infinite alternate;
+    /* Optional: Add a bounce effect */
+}
+
+@keyframes cursorBounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* Estilos opcionais para a mensagem */
+.mensagem {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #E1C999;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-family: 'Permanent Marker', cursive;
+}
